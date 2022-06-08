@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+    body {
+      background-color: hsl(217, 54%, 11%);
+      font-family: Outfit;
+      font-size: 18px;
+      user-select: none;
+    }
+
+    .container {
+      background-color: hsl(216, 50%, 16%);
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .container .imahe img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .imahe .overlay img {
+      width: 40px;
+      position: absolute;
+      top: 165px;
+      left: 150px;
+
+    }
+
+    .imahe .overlay img {
+      opacity: 0;
+    }
+
+    .imahe:hover .overlay img {
+      opacity: 1;
+      background-color: hsla(178, 100%, 50%, 0.438);
+      position: absolute;
+      top: 20px;
+      left: -1px;
+      padding: 130px;
+      margin-left: 20px;
+      transition: 50ms;
+      cursor: pointer;
+    }
+
+    h3 {
+      color: white;
+      font-size: 18px;
+      padding-left: 5px;
+      font-weight: 600;
+      transition: ease-in-out 0.2s;
+    }
+
+    h3:hover {
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+      transition: ease-in-out 0.5s;
+    }
+
+    p {
+      color: hsl(215, 51%, 70%);
+      font-weight: 300;
+
+    }
+
+    .linya {
+      border-bottom: 1px solid hsl(215, 32%, 27%);
+    }
+
+    .text-1 {
+      padding-bottom: 15px;
+    }
+
+    .text-1 p {
+      display: inline;
+    }
+
+    .text-1 .eth {
+      color: hsl(178, 100%, 50%);
+      font-size: 15px;
+    }
+
+    .text-1 .remaining {
+      padding-left: 120px;
+      font-size: 15px;
+    }
+
+    .avatar {
+      width: 20px;
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 0;
+      margin: 0;
+      margin-top: 15px;
+    }
+
+    .icon {
+      font-size: 15px;
+      color: hsl(215, 51%, 70%);
+      position: absolute;
+      top: 500px;
+      left: 55px;
+
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: 100;
+      transition: ease-in-out 0.2s;
+    }
+
+    a:hover {
+      color: hsl(178, 100%, 50%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="imahe">
+        <img src="images/image-equilibrium.jpg" alt="Equilibrium" class="equi">
+        <div class="overlay">
+          <img src="images/icon-view.svg" alt="">
+        </div>
+      </div>
+
+      <h3>Equilibrium #3429</h3>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+      <div class="linya text-1">
+
+        <p class="eth"><img src="images/icon-ethereum.svg" alt="icon-ethereum">0.041 ETH</p>
+        <p class="remaining"><img src="images/icon-clock.svg" alt="icon-clock">3 days left</p>
+      </div>
+      <img src="images/image-avatar.png" alt="image-avatar" class="avatar">
+      <div class="icon">
+        Creation of <a href="#">Jules Wyvern</a>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
